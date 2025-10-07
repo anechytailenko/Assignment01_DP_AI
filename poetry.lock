@@ -1004,6 +1004,30 @@ files = [
 arrow = ">=0.15.0"
 
 [[package]]
+<<<<<<< HEAD
+=======
+name = "iterative-stratification"
+version = "0.1.9"
+description = "Package that provides scikit-learn compatible cross validators with stratification for multilabel data"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = []
+develop = false
+
+[package.dependencies]
+numpy = "*"
+scikit-learn = "*"
+scipy = "*"
+
+[package.source]
+type = "git"
+url = "https://github.com/trent-b/iterative-stratification.git"
+reference = "HEAD"
+resolved_reference = "c763bd5440e5f03c6447471305897c1046fc4838"
+
+[[package]]
+>>>>>>> 650a055 (add notebooks + report)
 name = "jedi"
 version = "0.19.2"
 description = "An autocompletion tool for Python that can be used for text editors."
@@ -2284,7 +2308,11 @@ description = "NVIDIA Collective Communication Library (NCCL) Runtime"
 optional = false
 python-versions = ">=3"
 groups = ["main"]
+<<<<<<< HEAD
 markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""
+=======
+markers = "platform_system == \"Linux\" and platform_machine != \"aarch64\""
+>>>>>>> 650a055 (add notebooks + report)
 files = [
     {file = "nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:9ddf1a245abc36c550870f26d537a9b6087fb2e2e3d6e0ef03374c6fd19d984f"},
     {file = "nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:adf27ccf4238253e0b826bce3ff5fa532d65fc42322c8bfdfaf28024c0fbe039"},
@@ -3969,7 +3997,44 @@ files = [
     {file = "widgetsnbextension-4.0.14.tar.gz", hash = "sha256:a3629b04e3edb893212df862038c7232f62973373869db5084aed739b437b5af"},
 ]
 
+<<<<<<< HEAD
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.14"
 content-hash = "edd3020828b473e3d846ceed8d0387c8eb53c648c5d5ee9774050a1ea7ff4f45"
+=======
+[[package]]
+name = "xgboost"
+version = "3.0.5"
+description = "XGBoost Python Package"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "xgboost-3.0.5-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:f974028c7a0c3ae51ef87e2900405436ddafff46452f6f334f5cc295e921429b"},
+    {file = "xgboost-3.0.5-py3-none-macosx_12_0_arm64.whl", hash = "sha256:40c324c329bf74f44571cdafb7aa7435366309d76ec14b3e16874862aeb14351"},
+    {file = "xgboost-3.0.5-py3-none-manylinux2014_aarch64.whl", hash = "sha256:c580c82500ad566d927581381550561300492c0bc9c143b2e5be208d16f093d1"},
+    {file = "xgboost-3.0.5-py3-none-manylinux2014_x86_64.whl", hash = "sha256:d7f57a04629b52bae91a80e6721b9cdd009b605827a9eca67953675292b4487e"},
+    {file = "xgboost-3.0.5-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:d0fe44aaca76e9c4598d3be98ae94661aa53e4c4ceb161dc7183258f0e6fc138"},
+    {file = "xgboost-3.0.5-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:a03210a3e54c9e543f480db9636fee57247cfcd1ae850b353aeac59eea5ca350"},
+    {file = "xgboost-3.0.5-py3-none-win_amd64.whl", hash = "sha256:660774249d28a729ba8d22dd3d2c048c56e58f65a683b25ef3252e3383fe956f"},
+    {file = "xgboost-3.0.5.tar.gz", hash = "sha256:1a57a0d64a06b596992b664fe17dd1f9782138c6e35ad8fb6355e19a359fa50f"},
+]
+
+[package.dependencies]
+numpy = "*"
+nvidia-nccl-cu12 = {version = "*", markers = "platform_system == \"Linux\" and platform_machine != \"aarch64\""}
+scipy = "*"
+
+[package.extras]
+dask = ["dask", "distributed", "pandas"]
+pandas = ["pandas (>=1.2)"]
+plotting = ["graphviz", "matplotlib"]
+pyspark = ["cloudpickle", "pyspark", "scikit-learn"]
+scikit-learn = ["scikit-learn"]
+
+[metadata]
+lock-version = "2.1"
+python-versions = ">=3.11,<3.14"
+content-hash = "d1ddc819748c35643dd54ba2fbaac8d36d69d53860f78d19d4eb5eb2cd57da6c"
+>>>>>>> 650a055 (add notebooks + report)
